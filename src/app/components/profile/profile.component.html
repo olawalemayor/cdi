@@ -59,10 +59,19 @@
     />
   </div>
 
-  <button
-    class="text-white bg-blue-700 hover:bg-blue-600 py-3 px-4"
-    *ngIf="user.role === 'Admin'"
-  >
-    Create
-  </button>
+  <div>
+    <button
+      class="text-white bg-blue-700 hover:bg-blue-600 py-3 px-4"
+      *ngIf="user.role === 'Admin' && mode === 'new'"
+    >
+      Create
+    </button>
+
+    <button
+      class="text-white bg-blue-700 hover:bg-blue-600 py-3 px-4"
+      *ngIf="mode === 'update'"
+    >
+      Update
+    </button>
+  </div>
 </form>

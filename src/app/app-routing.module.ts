@@ -14,7 +14,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/user.module').then((m) => m.UserModule),
   },
-  { path: 'profile', component: ProfileComponent },
+  {
+    path: 'profile',
+    component: ProfileComponent,
+    children: [{ path: ':id', component: ProfileComponent }],
+  },
   { path: 'login', component: LoginComponent },
   { path: '', component: HomeComponent, pathMatch: 'full' },
 ];
