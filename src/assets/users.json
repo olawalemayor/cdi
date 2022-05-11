@@ -1,0 +1,54 @@
+[
+  {
+    "id": 1,
+    "name": "John Ford",
+    "username": "awesomejohn",
+    "password": "password1",
+    "role": "CSO",
+    "cases": [],
+    "state": "Lagos"
+  },
+  {
+    "id": 2,
+    "name": "Henry Mills",
+    "username": "itshenry",
+    "password": "password2",
+    "role": "CSO",
+    "cases": [],
+    "state": "Lagos"
+  },
+  {
+    "id": 3,
+    "name": "John Wilkes",
+    "username": "jwilkes",
+    "password": "password3",
+    "role": "CSO",
+    "cases": [],
+    "state": "Abuja"
+  },
+  {
+    "id": 4,
+    "name": "Merit Johnson",
+    "username": "meritjohnson",
+    "password": "password4",
+    "role": "Supervisor",
+    "approvedCases": [],
+    "state": "Lagos"
+  },
+  {
+    "id": 5,
+    "name": "Paul Walker",
+    "username": "snowwalker",
+    "password": "password5",
+    "role": "Supervisor",
+    "approvedCases": [],
+    "state": "Abuja"
+  },
+  {
+    "id": 6,
+    "name": "Christine McGregor",
+    "username": "admin",
+    "password": "adminpass",
+    "role": "Admin"
+  }
+]

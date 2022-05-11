@@ -1,0 +1,41 @@
+<div class="">
+  <nav class="flex justify-evenly items-center">
+    <a
+      *ngIf="setLoggedUser().id"
+      class="hover:text-blue-600"
+      routerLink="/profile"
+      routerLinkActive="text-blue-600"
+      >Profile</a
+    >
+
+    <a
+      *ngIf="setLoggedUser().id"
+      class="hover:text-blue-600"
+      routerLink="/cases"
+      routerLinkActive="text-blue-600"
+      >Cases</a
+    >
+
+    <a
+      *ngIf="setLoggedUser().id && setLoggedUser().role !== 'CSO'"
+      class="hover:text-blue-600"
+      routerLink="/users"
+      routerLinkActive="text-blue-600"
+      >Users</a
+    >
+
+    <a
+      *ngIf="!setLoggedUser().id"
+      routerLink="/login"
+      class="px-4 py-2 bg-blue-700 text-white hover:bg-blue-600"
+      >Login</a
+    >
+
+    <a
+      *ngIf="setLoggedUser().id"
+      (click)="logOut()"
+      class="px-4 py-2 bg-blue-700 text-white hover:bg-blue-600"
+      >Log Out</a
+    >
+  </nav>
+</div>

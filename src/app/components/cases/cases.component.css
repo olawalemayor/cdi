@@ -1,0 +1,4 @@
+button:disabled {
+  cursor: auto !important;
+  opacity: 0.4 !important;
+}

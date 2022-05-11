@@ -1,0 +1,9 @@
+.pg-bg {
+  height: calc(100vh - 88px);
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(119, 0, 0, 1) 63%
+  );
+}
