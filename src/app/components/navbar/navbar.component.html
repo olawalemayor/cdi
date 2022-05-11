@@ -17,7 +17,7 @@
     >
 
     <a
-      *ngIf="setLoggedUser().id && setLoggedUser().role !== 'CSO'"
+      *ngIf="setLoggedUser().id && setLoggedUser().role === 'Admin'"
       class="hover:text-blue-600"
       routerLink="/users"
       routerLinkActive="text-blue-600"

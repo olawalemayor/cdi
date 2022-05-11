@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { filter, find, map } from 'rxjs';
+import { filter, find, map, of } from 'rxjs';
 import { User } from '../models/user';
 
 @Injectable({
@@ -19,6 +19,8 @@ export class UserService {
     username: '',
   };
 
+  isLoggedin = false;
+
   logOut() {
     this.user = {
       id: 0,
@@ -28,11 +30,17 @@ export class UserService {
       username: '',
     };
 
+    this.isLoggedin = false;
+
     this.router.navigateByUrl('/');
   }
 
   getUsers() {
     return this._http.get<User[]>('../../assets/users.json');
+  }
+
+  getUser() {
+    return of(this.user);
   }
 
   setUsers(users: User[]) {
@@ -52,6 +60,8 @@ export class UserService {
       if (!result) return console.log('user not found');
 
       this.setUser(result);
+
+      this.isLoggedin = true;
 
       this.router.navigateByUrl('/profile');
     });

@@ -1,1 +1,27 @@
-<p>users works!</p>
+<h2 class="uppercase text-center text-4xl">USERS</h2>
+
+<div class="max-w-7xl mx-auto mt-12 px-2">
+  <div class="font-bold flex text-center py-3 bg-gray-800 text-gray-100">
+    <div class="w-1/4">Username</div>
+    <div class="w-1/4">Name</div>
+    <div class="w-1/4">Role</div>
+    <div class="w-1/4">State</div>
+  </div>
+
+  <div
+    *ngFor="let user of users"
+    class="flex text-center py-3 border-b hover:bg-gray-300"
+  >
+    <a
+      class="w-1/4 underline text-blue-600"
+      [routerLink]="'/user/' + user.id"
+      >{{ user.username }}</a
+    >
+
+    <div class="w-1/4">{{ user.name }}</div>
+
+    <div class="w-1/4">{{ user.role }}</div>
+
+    <div class="w-1/4">{{ user.state }}</div>
+  </div>
+</div>
